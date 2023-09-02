@@ -1,11 +1,55 @@
-[gd_scene load_steps=3 format=3 uid="uid://driedx8f7nu6r"]
+[gd_scene load_steps=5 format=3 uid="uid://driedx8f7nu6r"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_w2sug"]
-[ext_resource type="Texture2D" uid="uid://bltq1o3s1mby6" path="res://assets/textures/player/Fall (32x32).png" id="2_acfc3"]
+[ext_resource type="PackedScene" uid="uid://bev1h1e748x4g" path="res://scenes/player.tscn" id="2_q0mbp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ets21"]
+size = Vector2(387, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0u8hb"]
+size = Vector2(1653, 32)
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_w2sug")
 
-[node name="Fall(32x32)" type="Sprite2D" parent="."]
-position = Vector2(175, 174)
-texture = ExtResource("2_acfc3")
+[node name="Player" parent="." instance=ExtResource("2_q0mbp")]
+position = Vector2(232, 134)
+
+[node name="Ground" type="StaticBody2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Ground"]
+offset_left = -80.0
+offset_top = 249.0
+offset_right = 307.0
+offset_bottom = 269.0
+color = Color(0.509804, 0.0666667, 0.466667, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Ground"]
+offset_left = 355.0
+offset_top = 184.0
+offset_right = 742.0
+offset_bottom = 204.0
+color = Color(0.509804, 0.0666667, 0.466667, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+position = Vector2(114, 260)
+shape = SubResource("RectangleShape2D_ets21")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Ground"]
+position = Vector2(548, 195)
+shape = SubResource("RectangleShape2D_ets21")
+
+[node name="DeathZone" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]
+light_mask = 4
+visibility_layer = 2
+position = Vector2(371.5, 460)
+shape = SubResource("RectangleShape2D_0u8hb")
+
+[node name="StartPosition" type="Marker2D" parent="."]
+position = Vector2(69, 128)
+
+[connection signal="body_entered" from="DeathZone" to="." method="_on_death_zone_body_entered"]
