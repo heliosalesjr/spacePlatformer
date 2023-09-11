@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://d1sgy0n0biou"]
 
 [ext_resource type="Script" path="res://scripts/bg.gd" id="1_7bnhe"]
-[ext_resource type="Texture2D" uid="uid://65igjl8lrcp7" path="res://assets/textures/bg/Gray.png" id="2_y6d3y"]
+[ext_resource type="Texture2D" uid="uid://cjp2tvspfjb5p" path="res://assets/textures/bg/Blue.png" id="2_1waqi"]
 [ext_resource type="Texture2D" uid="uid://cnov444wek0r" path="res://assets/textures/bg/Pink.png" id="3_876nv"]
 
 [node name="BG" type="ParallaxBackground"]
@@ -12,7 +12,7 @@ motion_mirroring = Vector2(640, 640)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
 texture_repeat = 2
-texture = ExtResource("2_y6d3y")
+texture = ExtResource("2_1waqi")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 640, 640)
