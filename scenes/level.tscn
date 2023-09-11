@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://driedx8f7nu6r"]
+[gd_scene load_steps=11 format=3 uid="uid://driedx8f7nu6r"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_w2sug"]
 [ext_resource type="PackedScene" uid="uid://bev1h1e748x4g" path="res://scenes/player.tscn" id="2_q0mbp"]
@@ -8,12 +8,16 @@
 [ext_resource type="PackedScene" uid="uid://d3h4il1knwvm7" path="res://scenes/tile_map.tscn" id="6_wo10p"]
 [ext_resource type="PackedScene" uid="uid://d1sgy0n0biou" path="res://scenes/bg.tscn" id="7_u12sj"]
 [ext_resource type="PackedScene" uid="uid://c6uyqc242nm5q" path="res://scenes/start.tscn" id="8_n7sm3"]
+[ext_resource type="PackedScene" uid="uid://llyh2y4xwg5y" path="res://scenes/exit.tscn" id="9_4g8ty"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0u8hb"]
 size = Vector2(1653, 32)
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_w2sug")
+
+[node name="Exit" parent="." instance=ExtResource("9_4g8ty")]
+position = Vector2(406, 256)
 
 [node name="BG" parent="." instance=ExtResource("7_u12sj")]
 
