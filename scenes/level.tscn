@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://driedx8f7nu6r"]
+[gd_scene load_steps=12 format=3 uid="uid://driedx8f7nu6r"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_w2sug"]
+[ext_resource type="PackedScene" uid="uid://gyq8r66fw710" path="res://scenes/level_2.tscn" id="2_7o6wj"]
 [ext_resource type="PackedScene" uid="uid://bev1h1e748x4g" path="res://scenes/player.tscn" id="2_q0mbp"]
 [ext_resource type="PackedScene" uid="uid://f6k6pg0ql07f" path="res://scenes/jump_pad.tscn" id="3_seuks"]
 [ext_resource type="PackedScene" uid="uid://boxgsnnb1wg2" path="res://scenes/saw.tscn" id="3_t1q0c"]
@@ -15,6 +16,7 @@ size = Vector2(1653, 32)
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_w2sug")
+next_level = ExtResource("2_7o6wj")
 
 [node name="Exit" parent="." instance=ExtResource("9_4g8ty")]
 position = Vector2(406, 256)
