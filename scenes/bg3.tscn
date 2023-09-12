@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://mwyovqkhplwr"]
+
+[ext_resource type="Script" path="res://scripts/bg.gd" id="1_a2l1g"]
+[ext_resource type="Texture2D" uid="uid://cnov444wek0r" path="res://assets/textures/bg/Pink.png" id="4_wj1uq"]
+
+[node name="BG2" type="ParallaxBackground"]
+script = ExtResource("1_a2l1g")
+bg_texture = ExtResource("4_wj1uq")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(640, 640)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
+texture_repeat = 2
+texture = ExtResource("4_wj1uq")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 640, 640)
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxLayer"]
+visible = false
+texture_repeat = 2
+texture = ExtResource("4_wj1uq")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 640, 640)
