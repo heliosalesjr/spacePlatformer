@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://driedx8f7nu6r"]
+[gd_scene load_steps=13 format=3 uid="uid://driedx8f7nu6r"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_w2sug"]
 [ext_resource type="PackedScene" uid="uid://gyq8r66fw710" path="res://scenes/level_2.tscn" id="2_7o6wj"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://f6k6pg0ql07f" path="res://scenes/jump_pad.tscn" id="3_seuks"]
 [ext_resource type="PackedScene" uid="uid://boxgsnnb1wg2" path="res://scenes/saw.tscn" id="3_t1q0c"]
 [ext_resource type="PackedScene" uid="uid://b3l8vl0vh4dx3" path="res://scenes/spiked_ball.tscn" id="4_6fyml"]
+[ext_resource type="PackedScene" uid="uid://cnxy6ere6r4r6" path="res://scenes/ui_layer.tscn" id="5_vxprx"]
 [ext_resource type="PackedScene" uid="uid://bs3n4kpabkdue" path="res://scenes/death_zone.tscn" id="6_7qw6l"]
 [ext_resource type="PackedScene" uid="uid://d3h4il1knwvm7" path="res://scenes/tile_map.tscn" id="6_wo10p"]
 [ext_resource type="PackedScene" uid="uid://d1sgy0n0biou" path="res://scenes/bg.tscn" id="7_u12sj"]
@@ -16,10 +17,12 @@
 script = ExtResource("1_w2sug")
 next_level = ExtResource("2_7o6wj")
 
+[node name="BG" parent="." instance=ExtResource("7_u12sj")]
+
 [node name="Exit" parent="." instance=ExtResource("9_4g8ty")]
 position = Vector2(406, 256)
 
-[node name="BG" parent="." instance=ExtResource("7_u12sj")]
+[node name="UILayer" parent="." instance=ExtResource("5_vxprx")]
 
 [node name="Player" parent="." instance=ExtResource("2_q0mbp")]
 position = Vector2(232, 134)

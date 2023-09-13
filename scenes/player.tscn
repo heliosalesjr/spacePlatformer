@@ -216,3 +216,4 @@ shape = SubResource("RectangleShape2D_penb1")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_bottom = 320
+position_smoothing_enabled = true

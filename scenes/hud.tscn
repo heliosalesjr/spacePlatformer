@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://cuydkdapaspej"]
+
+[ext_resource type="Script" path="res://scripts/hud.gd" id="1_qljp1"]
+[ext_resource type="FontFile" uid="uid://8yjsm2brg4lb" path="res://assets/fonts/Kenney Pixel Square.ttf" id="2_wpdld"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1ru1d"]
+font = ExtResource("2_wpdld")
+outline_size = 5
+outline_color = Color(0.254902, 0, 0.462745, 1)
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qljp1")
+
+[node name="TimeLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -42.0
+offset_right = 42.0
+offset_bottom = 26.0
+grow_horizontal = 2
+text = "TIME: 9999"
+label_settings = SubResource("LabelSettings_1ru1d")
+horizontal_alignment = 1
+vertical_alignment = 1

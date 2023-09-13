@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c32j1x1aevv2i"]
+[gd_scene load_steps=10 format=3 uid="uid://c32j1x1aevv2i"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_c3s6y"]
 [ext_resource type="PackedScene" uid="uid://d3h4il1knwvm7" path="res://scenes/tile_map.tscn" id="3_8pskd"]
@@ -8,10 +8,12 @@
 [ext_resource type="PackedScene" uid="uid://bs3n4kpabkdue" path="res://scenes/death_zone.tscn" id="7_8ij7e"]
 [ext_resource type="PackedScene" uid="uid://mwyovqkhplwr" path="res://scenes/bg3.tscn" id="8_cacjy"]
 [ext_resource type="PackedScene" uid="uid://f6k6pg0ql07f" path="res://scenes/jump_pad.tscn" id="8_opin6"]
+[ext_resource type="PackedScene" uid="uid://cnxy6ere6r4r6" path="res://scenes/ui_layer.tscn" id="9_vh7r7"]
 
 [node name="Level_3" type="Node2D"]
 position = Vector2(1, 0)
 script = ExtResource("1_c3s6y")
+is_final_level = true
 
 [node name="BG2" parent="." instance=ExtResource("8_cacjy")]
 
@@ -22,7 +24,7 @@ layer_0/tile_data = PackedInt32Array(1179665, 458752, 2, 1114129, 458752, 1, 104
 position = Vector2(42, 240)
 
 [node name="Exit" parent="." instance=ExtResource("5_6pc6c")]
-position = Vector2(1014, 208)
+position = Vector2(653, 48)
 
 [node name="Player" parent="." instance=ExtResource("6_aitot")]
 
@@ -42,3 +44,5 @@ position = Vector2(891, 280)
 
 [node name="JumpPad5" parent="." instance=ExtResource("8_opin6")]
 position = Vector2(941, 342)
+
+[node name="UILayer" parent="." instance=ExtResource("9_vh7r7")]
