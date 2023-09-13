@@ -1,0 +1,77 @@
+[gd_scene load_steps=5 format=3 uid="uid://67d2dsnxxbok"]
+
+[ext_resource type="Script" path="res://scripts/start_menu.gd" id="1_nfr82"]
+[ext_resource type="PackedScene" uid="uid://mwyovqkhplwr" path="res://scenes/bg3.tscn" id="1_njojh"]
+[ext_resource type="FontFile" uid="uid://8yjsm2brg4lb" path="res://assets/fonts/Kenney Pixel Square.ttf" id="2_0mglj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7dpki"]
+font = ExtResource("2_0mglj")
+font_size = 48
+outline_size = 8
+outline_color = Color(0.596078, 0.298039, 1, 1)
+shadow_size = 8
+shadow_color = Color(0, 0, 0, 0.12549)
+shadow_offset = Vector2(6, 6)
+
+[node name="StartMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nfr82")
+
+[node name="BG2" parent="." instance=ExtResource("1_njojh")]
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -138.0
+offset_top = -57.0
+offset_right = 138.0
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "TIME OUT!"
+label_settings = SubResource("LabelSettings_7dpki")
+
+[node name="Start" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.652
+anchor_right = 0.5
+anchor_bottom = 0.652
+offset_left = -52.0
+offset_top = -14.04
+offset_right = 49.0
+offset_bottom = 17.96
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_0mglj")
+text = "Start"
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.814
+anchor_right = 0.5
+anchor_bottom = 0.814
+offset_left = -22.0
+offset_top = -12.78
+offset_right = 22.0
+offset_bottom = 10.22
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_0mglj")
+theme_override_font_sizes/font_size = 9
+text = "Quit"
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
