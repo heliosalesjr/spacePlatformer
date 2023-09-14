@@ -8,7 +8,7 @@ extends Node2D
 
 @onready var hud = $UILayer/HUD
 @onready var ui_layer = $UILayer
-@export var level_time = 5
+@export var level_time = 50
 
 var timer_node = null
 var time_left
