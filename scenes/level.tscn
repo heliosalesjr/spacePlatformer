@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://d1sgy0n0biou" path="res://scenes/bg.tscn" id="7_u12sj"]
 [ext_resource type="PackedScene" uid="uid://c6uyqc242nm5q" path="res://scenes/start.tscn" id="8_n7sm3"]
 [ext_resource type="PackedScene" uid="uid://llyh2y4xwg5y" path="res://scenes/exit.tscn" id="9_4g8ty"]
-[ext_resource type="PackedScene" uid="uid://jskyracmi5o0" path="res://scenes/caixa.tscn" id="11_6jl1p"]
+[ext_resource type="PackedScene" uid="uid://2vpwwmkyw25a" path="res://scenes/caixinha.tscn" id="11_yoy57"]
 
 [node name="Level" type="Node2D"]
 position = Vector2(2, -52)
@@ -24,14 +24,8 @@ position = Vector2(1211, 194)
 
 [node name="UILayer" parent="." instance=ExtResource("5_vxprx")]
 
-[node name="Caixa" parent="." instance=ExtResource("11_6jl1p")]
-position = Vector2(350, 246)
-
 [node name="Player" parent="." instance=ExtResource("2_q0mbp")]
 position = Vector2(232, 134)
-gravity = 400
-jump_force = 200
-speed = 125
 
 [node name="DeathZone" parent="." instance=ExtResource("6_7qw6l")]
 position = Vector2(687, -6)
@@ -49,3 +43,6 @@ layer_0/tile_data = PackedInt32Array(1245190, 458752, 2, 1179654, 458752, 1, 111
 
 [node name="Start" parent="." instance=ExtResource("8_n7sm3")]
 position = Vector2(138, 256)
+
+[node name="Caixinha" parent="." instance=ExtResource("11_yoy57")]
+position = Vector2(351, 244)

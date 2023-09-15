@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://2vpwwmkyw25a"]
+
+[ext_resource type="Script" path="res://scripts/caixinha.gd" id="1_gofma"]
+[ext_resource type="Texture2D" uid="uid://iolupjt4pwk8" path="res://assets/textures/bg/Yellow.png" id="1_nttgd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j63sl"]
+size = Vector2(34, 31)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3f6hq"]
+size = Vector2(20, 7)
+
+[node name="Caixinha" type="RigidBody2D"]
+collision_layer = 2
+collision_mask = 15
+script = ExtResource("1_gofma")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_j63sl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_nttgd")
+
+[node name="Pulo" type="CollisionShape2D" parent="."]
+light_mask = 9
+visibility_layer = 3
+position = Vector2(0, -13.5)
+shape = SubResource("RectangleShape2D_3f6hq")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
