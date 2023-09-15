@@ -45,4 +45,3 @@ func update_animations(direction):
 			animated_sprite_2d.play("jump")
 		else:
 			animated_sprite_2d.play("fall")
-

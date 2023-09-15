@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://gyq8r66fw710"]
+[gd_scene load_steps=12 format=3 uid="uid://gyq8r66fw710"]
 
 [ext_resource type="PackedScene" uid="uid://bev1h1e748x4g" path="res://scenes/player.tscn" id="1_33ude"]
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_bnuvy"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bs3n4kpabkdue" path="res://scenes/death_zone.tscn" id="7_gjjci"]
 [ext_resource type="PackedScene" uid="uid://f6k6pg0ql07f" path="res://scenes/jump_pad.tscn" id="8_hm1gh"]
 [ext_resource type="PackedScene" uid="uid://cubv07x5vemd5" path="res://scenes/bg2.tscn" id="9_p6lwe"]
+[ext_resource type="PackedScene" uid="uid://boxgsnnb1wg2" path="res://scenes/saw.tscn" id="11_5py47"]
 
 [node name="Level_2" type="Node2D"]
 script = ExtResource("1_bnuvy")
@@ -46,3 +47,6 @@ position = Vector2(891, 280)
 position = Vector2(941, 342)
 
 [node name="BG2" parent="." instance=ExtResource("9_p6lwe")]
+
+[node name="Saw" parent="." instance=ExtResource("11_5py47")]
+position = Vector2(274, 174)
